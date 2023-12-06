@@ -1,0 +1,17 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  creationTimestamp: null
+  name: nodejs-app-multi-components-repo
+spec:
+  selector: {}
+  strategy: {}
+  template:
+    metadata:
+      creationTimestamp: null
+    spec:
+      containers:
+      - image: quay.io/hacdev/fndgmbcy-tenant/test-app-170185458/nodejs-app-multi-components-repo@sha256:afdd9258c32c2b3d8af692dfee3ec39ee3de57396d9166c42fddb145ed6f77c3
+        name: my-nodejs
+        resources: {}
+status: {}

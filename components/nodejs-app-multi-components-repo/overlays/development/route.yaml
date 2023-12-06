@@ -1,0 +1,22 @@
+apiVersion: route.openshift.io/v1
+kind: Route
+metadata:
+  creationTimestamp: null
+  labels:
+    app.kubernetes.io/created-by: application-service
+    app.kubernetes.io/instance: nodejs-app-multi-components-repo
+    app.kubernetes.io/managed-by: kustomize
+    app.kubernetes.io/name: nodejs-app-multi-components-repo
+    app.kubernetes.io/part-of: test-app-170185458
+  name: nodejs-app-multi-componenr2am
+spec:
+  port:
+    targetPort: 8080
+  tls:
+    insecureEdgeTerminationPolicy: Redirect
+    termination: edge
+  to:
+    kind: Service
+    name: nodejs-app-multi-components-repo
+    weight: 100
+status: {}
